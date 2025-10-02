@@ -5,6 +5,8 @@ import merchantRoutes from './merchants';
 import couponRoutes from './coupons';
 import lotteryRoutes from './lotteries';
 import storeRoutes from './stores';
+import languageRoutes from './languages';
+import contentRoutes from './content';
 
 const router = Router();
 
@@ -15,6 +17,8 @@ router.use('/merchants', merchantRoutes);
 router.use('/coupons', couponRoutes);
 router.use('/lotteries', lotteryRoutes);
 router.use('/stores', storeRoutes);
+router.use('/languages', languageRoutes);
+router.use('/content', contentRoutes);
 
 // API info endpoint
 router.get('/', (req, res) => {
@@ -31,6 +35,8 @@ router.get('/', (req, res) => {
         coupons: '/api/v1/coupons',
         lotteries: '/api/v1/lotteries',
         stores: '/api/v1/stores',
+        languages: '/api/v1/languages',
+        content: '/api/v1/content',
         docs: '/api/docs',
       },
     },

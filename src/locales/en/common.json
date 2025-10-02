@@ -1,0 +1,47 @@
+{
+  "app": {
+    "name": "Hong Kong Retail NFT Coupon Platform",
+    "description": "Innovative NFT coupon trading platform"
+  },
+  "navigation": {
+    "home": "Home",
+    "explore": "Explore",
+    "nfts": "My NFTs",
+    "profile": "Profile",
+    "merchants": "Merchants",
+    "lotteries": "Lotteries"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "expired": "Expired"
+  },
+  "messages": {
+    "success": "Operation successful",
+    "error": "Operation failed",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "confirmDelete": "Are you sure you want to delete?",
+    "unsavedChanges": "You have unsaved changes"
+  }
+}

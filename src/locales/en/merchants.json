@@ -1,0 +1,50 @@
+{
+  "titles": {
+    "merchantProfile": "Merchant Profile",
+    "merchantList": "Merchant List",
+    "nearbyMerchants": "Nearby Merchants",
+    "merchantDetails": "Merchant Details",
+    "registerMerchant": "Register Merchant",
+    "editMerchant": "Edit Merchant Profile"
+  },
+  "fields": {
+    "name": "Merchant Name",
+    "description": "Description",
+    "address": "Address",
+    "phone": "Phone Number",
+    "email": "Email",
+    "website": "Website",
+    "category": "Category",
+    "openingHours": "Opening Hours",
+    "rating": "Rating",
+    "isNftParticipant": "NFT Program Participant",
+    "location": "Location",
+    "distance": "Distance"
+  },
+  "categories": {
+    "restaurant": "Restaurant",
+    "retail": "Retail",
+    "fashion": "Fashion",
+    "electronics": "Electronics",
+    "beauty": "Beauty",
+    "health": "Health",
+    "entertainment": "Entertainment",
+    "services": "Services",
+    "other": "Other"
+  },
+  "actions": {
+    "viewDetails": "View Details",
+    "getDirections": "Get Directions",
+    "callMerchant": "Call Merchant",
+    "visitWebsite": "Visit Website",
+    "viewCoupons": "View Coupons",
+    "followMerchant": "Follow Merchant"
+  },
+  "messages": {
+    "registrationSuccess": "Merchant registration successful",
+    "updateSuccess": "Merchant profile updated successfully",
+    "merchantNotFound": "Merchant not found",
+    "noMerchantsNearby": "No merchants nearby",
+    "locationPermissionRequired": "Location permission required to show nearby merchants"
+  }
+}

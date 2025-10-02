@@ -1,0 +1,34 @@
+{
+  "responses": {
+    "success": "請求成功",
+    "created": "資源已創建",
+    "updated": "資源已更新",
+    "deleted": "資源已刪除",
+    "notFound": "找不到資源",
+    "unauthorized": "未授權訪問",
+    "forbidden": "禁止訪問",
+    "badRequest": "請求格式錯誤",
+    "internalError": "伺服器內部錯誤",
+    "serviceUnavailable": "服務暫時不可用"
+  },
+  "validation": {
+    "required": "此欄位為必填",
+    "invalidFormat": "格式不正確",
+    "tooShort": "長度太短",
+    "tooLong": "長度太長",
+    "invalidEmail": "電子郵件格式不正確",
+    "invalidWallet": "錢包地址格式不正確",
+    "invalidAmount": "金額格式不正確",
+    "invalidDate": "日期格式不正確"
+  },
+  "auth": {
+    "loginSuccess": "登入成功",
+    "logoutSuccess": "登出成功",
+    "invalidCredentials": "登入憑證無效",
+    "tokenExpired": "令牌已過期",
+    "walletConnected": "錢包已連接",
+    "walletDisconnected": "錢包已斷開連接",
+    "signatureVerified": "簽名驗證成功",
+    "signatureInvalid": "簽名驗證失敗"
+  }
+}

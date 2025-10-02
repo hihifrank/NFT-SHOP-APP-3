@@ -1,0 +1,21 @@
+{
+  "validation": {
+    "invalidLanguage": "不支援的語言代碼",
+    "missingTranslations": "缺少翻譯內容",
+    "invalidNamespace": "無效的命名空間",
+    "invalidKey": "無效的翻譯鍵值"
+  },
+  "content": {
+    "namespaceNotFound": "找不到指定的命名空間",
+    "contentNotFound": "找不到指定的內容項目",
+    "duplicateKey": "翻譯鍵值已存在",
+    "importFailed": "匯入翻譯失敗",
+    "exportFailed": "匯出翻譯失敗"
+  },
+  "system": {
+    "i18nInitFailed": "國際化系統初始化失敗",
+    "languageChangeFailed": "語言切換失敗",
+    "fileReadError": "讀取翻譯檔案失敗",
+    "fileWriteError": "寫入翻譯檔案失敗"
+  }
+}

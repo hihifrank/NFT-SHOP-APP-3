@@ -1,0 +1,57 @@
+{
+  "titles": {
+    "myCoupons": "My Coupons",
+    "availableCoupons": "Available Coupons",
+    "usedCoupons": "Used Coupons",
+    "expiredCoupons": "Expired Coupons",
+    "couponDetails": "Coupon Details",
+    "createCoupon": "Create Coupon",
+    "editCoupon": "Edit Coupon"
+  },
+  "fields": {
+    "name": "Coupon Name",
+    "description": "Description",
+    "discountType": "Discount Type",
+    "discountValue": "Discount Value",
+    "maxQuantity": "Maximum Quantity",
+    "remainingQuantity": "Remaining Quantity",
+    "expiryDate": "Expiry Date",
+    "merchant": "Merchant",
+    "category": "Category",
+    "terms": "Terms of Use",
+    "nftTokenId": "NFT Token ID",
+    "rarity": "Rarity"
+  },
+  "discountTypes": {
+    "percentage": "Percentage Discount",
+    "fixedAmount": "Fixed Amount Discount",
+    "buyOneGetOne": "Buy One Get One",
+    "freeShipping": "Free Shipping",
+    "giftWithPurchase": "Gift with Purchase"
+  },
+  "rarity": {
+    "common": "Common",
+    "uncommon": "Uncommon",
+    "rare": "Rare",
+    "epic": "Epic",
+    "legendary": "Legendary"
+  },
+  "actions": {
+    "useCoupon": "Use Coupon",
+    "transferCoupon": "Transfer Coupon",
+    "viewOnBlockchain": "View on Blockchain",
+    "downloadQR": "Download QR Code",
+    "shareCoupon": "Share Coupon"
+  },
+  "messages": {
+    "couponUsed": "Coupon used successfully",
+    "couponTransferred": "Coupon transferred successfully",
+    "couponExpired": "Coupon has expired",
+    "couponNotFound": "Coupon not found",
+    "insufficientQuantity": "Insufficient quantity",
+    "alreadyUsed": "Coupon already used",
+    "transferSuccess": "Transfer successful",
+    "usageSuccess": "Usage successful",
+    "creationSuccess": "Creation successful"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "validation": {
+    "invalidLanguage": "不支持的语言代码",
+    "missingTranslations": "缺少翻译内容",
+    "invalidNamespace": "无效的命名空间",
+    "invalidKey": "无效的翻译键值"
+  },
+  "content": {
+    "namespaceNotFound": "找不到指定的命名空间",
+    "contentNotFound": "找不到指定的内容项目",
+    "duplicateKey": "翻译键值已存在",
+    "importFailed": "导入翻译失败",
+    "exportFailed": "导出翻译失败"
+  },
+  "system": {
+    "i18nInitFailed": "国际化系统初始化失败",
+    "languageChangeFailed": "语言切换失败",
+    "fileReadError": "读取翻译文件失败",
+    "fileWriteError": "写入翻译文件失败"
+  }
+}

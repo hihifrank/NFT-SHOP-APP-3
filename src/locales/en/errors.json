@@ -1,0 +1,21 @@
+{
+  "validation": {
+    "invalidLanguage": "Unsupported language code",
+    "missingTranslations": "Missing translation content",
+    "invalidNamespace": "Invalid namespace",
+    "invalidKey": "Invalid translation key"
+  },
+  "content": {
+    "namespaceNotFound": "Specified namespace not found",
+    "contentNotFound": "Specified content item not found",
+    "duplicateKey": "Translation key already exists",
+    "importFailed": "Failed to import translations",
+    "exportFailed": "Failed to export translations"
+  },
+  "system": {
+    "i18nInitFailed": "Failed to initialize internationalization system",
+    "languageChangeFailed": "Failed to change language",
+    "fileReadError": "Failed to read translation file",
+    "fileWriteError": "Failed to write translation file"
+  }
+}

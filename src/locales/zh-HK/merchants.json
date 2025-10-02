@@ -1,0 +1,50 @@
+{
+  "titles": {
+    "merchantProfile": "商家資料",
+    "merchantList": "商家列表",
+    "nearbyMerchants": "附近商家",
+    "merchantDetails": "商家詳情",
+    "registerMerchant": "註冊商家",
+    "editMerchant": "編輯商家資料"
+  },
+  "fields": {
+    "name": "商家名稱",
+    "description": "商家描述",
+    "address": "地址",
+    "phone": "電話號碼",
+    "email": "電子郵件",
+    "website": "網站",
+    "category": "類別",
+    "openingHours": "營業時間",
+    "rating": "評分",
+    "isNftParticipant": "參與NFT計劃",
+    "location": "位置",
+    "distance": "距離"
+  },
+  "categories": {
+    "restaurant": "餐廳",
+    "retail": "零售",
+    "fashion": "時裝",
+    "electronics": "電子產品",
+    "beauty": "美容",
+    "health": "健康",
+    "entertainment": "娛樂",
+    "services": "服務",
+    "other": "其他"
+  },
+  "actions": {
+    "viewDetails": "查看詳情",
+    "getDirections": "獲取路線",
+    "callMerchant": "致電商家",
+    "visitWebsite": "訪問網站",
+    "viewCoupons": "查看優惠券",
+    "followMerchant": "關注商家"
+  },
+  "messages": {
+    "registrationSuccess": "商家註冊成功",
+    "updateSuccess": "商家資料更新成功",
+    "merchantNotFound": "找不到商家",
+    "noMerchantsNearby": "附近沒有商家",
+    "locationPermissionRequired": "需要位置權限才能顯示附近商家"
+  }
+}

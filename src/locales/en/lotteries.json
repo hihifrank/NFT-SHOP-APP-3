@@ -1,0 +1,56 @@
+{
+  "titles": {
+    "activeLotteries": "Active Lotteries",
+    "myLotteries": "My Lotteries",
+    "lotteryHistory": "Lottery History",
+    "lotteryDetails": "Lottery Details",
+    "createLottery": "Create Lottery",
+    "lotteryResults": "Lottery Results"
+  },
+  "fields": {
+    "name": "Lottery Name",
+    "description": "Description",
+    "entryFee": "Entry Fee",
+    "totalPrizes": "Total Prizes",
+    "remainingPrizes": "Remaining Prizes",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "winningChance": "Winning Chance",
+    "participants": "Participants",
+    "status": "Status",
+    "prizeType": "Prize Type",
+    "prizeValue": "Prize Value"
+  },
+  "status": {
+    "upcoming": "Upcoming",
+    "active": "Active",
+    "drawing": "Drawing",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  "prizeTypes": {
+    "nft": "NFT Coupon",
+    "discount": "Discount Coupon",
+    "freeItem": "Free Item",
+    "cashback": "Cashback",
+    "exclusive": "Exclusive Offer"
+  },
+  "actions": {
+    "participate": "Participate",
+    "viewResults": "View Results",
+    "claimPrize": "Claim Prize",
+    "shareResult": "Share Result",
+    "viewHistory": "View History"
+  },
+  "messages": {
+    "participationSuccess": "Successfully participated in lottery",
+    "alreadyParticipated": "You have already participated in this lottery",
+    "lotteryEnded": "Lottery has ended",
+    "insufficientBalance": "Insufficient balance",
+    "congratulationsWin": "Congratulations! You won!",
+    "betterLuckNextTime": "Better luck next time!",
+    "prizeClaimedSuccess": "Prize claimed successfully",
+    "lotteryNotFound": "Lottery not found",
+    "drawingInProgress": "Drawing in progress, please wait..."
+  }
+}

@@ -320,15 +320,20 @@ export interface RedisConfig {
 }
 
 export interface BlockchainConfig {
-  networkUrl: string;
+  network: string;
+  rpcUrl: string;
   chainId: number;
-  contractAddresses: {
-    couponNFT: string;
-    lottery: string;
-  };
+  couponNFTAddress: string;
+  lotteryAddress: string;
   privateKey?: string;
   gasLimit: number;
   gasPrice: string;
+}
+
+export interface IPFSConfig {
+  gateway: string;
+  pinataApiKey?: string;
+  pinataSecretKey?: string;
 }
 
 export interface AppConfig {
@@ -338,8 +343,8 @@ export interface AppConfig {
   database: DatabaseConfig;
   redis: RedisConfig;
   blockchain: BlockchainConfig;
-  ipfs: {
-    gateway: string;
-    apiUrl: string;
+  ipfs: IPFSConfig;
+  app: {
+    baseUrl: string;
   };
 }

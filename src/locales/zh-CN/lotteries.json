@@ -1,0 +1,56 @@
+{
+  "titles": {
+    "activeLotteries": "进行中抽奖",
+    "myLotteries": "我的抽奖",
+    "lotteryHistory": "抽奖历史",
+    "lotteryDetails": "抽奖详情",
+    "createLottery": "创建抽奖",
+    "lotteryResults": "抽奖结果"
+  },
+  "fields": {
+    "name": "抽奖名称",
+    "description": "描述",
+    "entryFee": "参与费用",
+    "totalPrizes": "总奖品数量",
+    "remainingPrizes": "剩余奖品",
+    "startTime": "开始时间",
+    "endTime": "结束时间",
+    "winningChance": "中奖机率",
+    "participants": "参与人数",
+    "status": "状态",
+    "prizeType": "奖品类型",
+    "prizeValue": "奖品价值"
+  },
+  "status": {
+    "upcoming": "即将开始",
+    "active": "进行中",
+    "drawing": "抽奖中",
+    "completed": "已完成",
+    "cancelled": "已取消"
+  },
+  "prizeTypes": {
+    "nft": "NFT优惠券",
+    "discount": "折扣券",
+    "freeItem": "免费商品",
+    "cashback": "现金回馈",
+    "exclusive": "独家优惠"
+  },
+  "actions": {
+    "participate": "参与抽奖",
+    "viewResults": "查看结果",
+    "claimPrize": "领取奖品",
+    "shareResult": "分享结果",
+    "viewHistory": "查看历史"
+  },
+  "messages": {
+    "participationSuccess": "成功参与抽奖",
+    "alreadyParticipated": "您已参与此抽奖",
+    "lotteryEnded": "抽奖已结束",
+    "insufficientBalance": "余额不足",
+    "congratulationsWin": "恭喜您中奖了！",
+    "betterLuckNextTime": "下次好运！",
+    "prizeClaimedSuccess": "奖品领取成功",
+    "lotteryNotFound": "找不到抽奖活动",
+    "drawingInProgress": "正在进行抽奖，请稍候..."
+  }
+}

@@ -27,20 +27,24 @@ const config: AppConfig = {
   },
   
   blockchain: {
-    networkUrl: process.env.BLOCKCHAIN_NETWORK_URL || 'https://polygon-mumbai.g.alchemy.com/v2/demo',
+    network: process.env.BLOCKCHAIN_NETWORK || 'mumbai',
+    rpcUrl: process.env.BLOCKCHAIN_RPC_URL || 'https://polygon-mumbai.g.alchemy.com/v2/demo',
     chainId: parseInt(process.env.BLOCKCHAIN_CHAIN_ID || '80001', 10),
-    contractAddresses: {
-      couponNFT: process.env.CONTRACT_COUPON_NFT || '',
-      lottery: process.env.CONTRACT_LOTTERY || '',
-    },
+    couponNFTAddress: process.env.CONTRACT_COUPON_NFT || '',
+    lotteryAddress: process.env.CONTRACT_LOTTERY || '',
     privateKey: process.env.BLOCKCHAIN_PRIVATE_KEY,
     gasLimit: parseInt(process.env.BLOCKCHAIN_GAS_LIMIT || '500000', 10),
     gasPrice: process.env.BLOCKCHAIN_GAS_PRICE || '20000000000',
   },
   
   ipfs: {
-    gateway: process.env.IPFS_GATEWAY || 'https://gateway.pinata.cloud',
-    apiUrl: process.env.IPFS_API_URL || 'https://api.pinata.cloud',
+    gateway: process.env.IPFS_GATEWAY || 'https://gateway.pinata.cloud/ipfs/',
+    pinataApiKey: process.env.PINATA_API_KEY,
+    pinataSecretKey: process.env.PINATA_SECRET_KEY,
+  },
+  
+  app: {
+    baseUrl: process.env.APP_BASE_URL || 'http://localhost:3000',
   },
 };
 

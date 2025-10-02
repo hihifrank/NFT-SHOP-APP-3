@@ -2,6 +2,15 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import config from './config';
+import { initI18n } from './config/i18n';
+import { languageDetectionMiddleware } from './middleware/i18n';
+
+// Initialize i18n
+initI18n().then(() => {
+  console.log('✅ Internationalization initialized');
+}).catch((error) => {
+  console.error('❌ Failed to initialize i18n:', error);
+});
 
 // Initialize Express application
 const app = express();
@@ -19,6 +28,9 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+// Language detection middleware
+app.use(languageDetectionMiddleware);
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({
@@ -29,22 +41,11 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API routes will be added here in future tasks
-app.get('/api/v1', (req, res) => {
-  res.json({
-    message: 'HK Retail NFT Platform API',
-    version: '1.0.0',
-    endpoints: {
-      health: '/health',
-      auth: '/api/v1/auth',
-      users: '/api/v1/users',
-      merchants: '/api/v1/merchants',
-      coupons: '/api/v1/coupons',
-      lotteries: '/api/v1/lotteries',
-      stores: '/api/v1/stores',
-    },
-  });
-});
+// Import API routes
+import apiRoutes from './routes';
+
+// API routes
+app.use('/api/v1', apiRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {

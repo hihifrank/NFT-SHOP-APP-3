@@ -1,0 +1,34 @@
+{
+  "responses": {
+    "success": "Request successful",
+    "created": "Resource created",
+    "updated": "Resource updated",
+    "deleted": "Resource deleted",
+    "notFound": "Resource not found",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "badRequest": "Bad request format",
+    "internalError": "Internal server error",
+    "serviceUnavailable": "Service temporarily unavailable"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidFormat": "Invalid format",
+    "tooShort": "Too short",
+    "tooLong": "Too long",
+    "invalidEmail": "Invalid email format",
+    "invalidWallet": "Invalid wallet address format",
+    "invalidAmount": "Invalid amount format",
+    "invalidDate": "Invalid date format"
+  },
+  "auth": {
+    "loginSuccess": "Login successful",
+    "logoutSuccess": "Logout successful",
+    "invalidCredentials": "Invalid credentials",
+    "tokenExpired": "Token expired",
+    "walletConnected": "Wallet connected",
+    "walletDisconnected": "Wallet disconnected",
+    "signatureVerified": "Signature verified successfully",
+    "signatureInvalid": "Signature verification failed"
+  }
+}
