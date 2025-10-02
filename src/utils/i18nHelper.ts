@@ -72,10 +72,10 @@ export const localizeObjectArray = <T extends Record<string, any>>(
   fallbackLanguage: SupportedLanguage = 'zh-HK'
 ): T[] => {
   return objects.map(obj => {
-    const localizedObj = { ...obj };
+    const localizedObj: T = { ...obj };
     
     fieldsToLocalize.forEach(field => {
-      localizedObj[field] = getLocalizedField(req, obj, field, fallbackLanguage);
+      (localizedObj as any)[field] = getLocalizedField(req, obj, field, fallbackLanguage);
     });
     
     return localizedObj;
