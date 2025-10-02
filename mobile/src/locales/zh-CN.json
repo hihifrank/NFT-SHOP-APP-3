@@ -1,0 +1,82 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "back": "返回",
+    "next": "下一步",
+    "done": "完成",
+    "retry": "重试"
+  },
+  "navigation": {
+    "home": "首页",
+    "explore": "探索",
+    "nft": "NFT",
+    "profile": "个人"
+  },
+  "auth": {
+    "connectWallet": "连接钱包",
+    "walletConnected": "钱包已连接",
+    "walletDisconnected": "钱包已断开",
+    "connectingWallet": "正在连接钱包...",
+    "walletConnectionFailed": "钱包连接失败"
+  },
+  "home": {
+    "welcome": "欢迎来到香港零售NFT平台",
+    "featuredCoupons": "精选优惠券",
+    "nearbyMerchants": "附近商家",
+    "activeLotteries": "进行中的抽奖"
+  },
+  "explore": {
+    "searchPlaceholder": "搜索商家或优惠券...",
+    "categories": "分类",
+    "allCategories": "所有分类",
+    "restaurants": "餐厅",
+    "shopping": "购物",
+    "entertainment": "娱乐",
+    "services": "服务"
+  },
+  "nft": {
+    "myNFTs": "我的NFT",
+    "availableCoupons": "可用优惠券",
+    "usedCoupons": "已使用优惠券",
+    "nftDetails": "NFT详情",
+    "useCoupon": "使用优惠券",
+    "transferNFT": "转让NFT"
+  },
+  "merchant": {
+    "details": "商家详情",
+    "location": "位置",
+    "hours": "营业时间",
+    "contact": "联系方式",
+    "coupons": "优惠券",
+    "rating": "评分"
+  },
+  "lottery": {
+    "participate": "参与抽奖",
+    "entryFee": "参与费用",
+    "prizes": "奖品",
+    "timeRemaining": "剩余时间",
+    "participationHistory": "参与记录"
+  },
+  "profile": {
+    "settings": "设置",
+    "language": "语言",
+    "notifications": "通知",
+    "privacy": "隐私",
+    "about": "关于",
+    "logout": "登出"
+  },
+  "errors": {
+    "networkError": "网络连接错误",
+    "serverError": "服务器错误",
+    "invalidInput": "输入无效",
+    "notFound": "找不到资源",
+    "unauthorized": "未授权访问"
+  }
+}

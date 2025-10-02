@@ -1,0 +1,225 @@
+{
+  "common": {
+    "loading": "載入中...",
+    "error": "錯誤",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "確認",
+    "save": "儲存",
+    "delete": "刪除",
+    "edit": "編輯",
+    "back": "返回",
+    "next": "下一步",
+    "done": "完成",
+    "retry": "重試"
+  },
+  "navigation": {
+    "home": "首頁",
+    "explore": "探索",
+    "nft": "NFT",
+    "profile": "個人"
+  },
+  "auth": {
+    "connectWallet": "連接錢包",
+    "walletConnected": "錢包已連接",
+    "walletDisconnected": "錢包已斷開",
+    "connectingWallet": "正在連接錢包...",
+    "walletConnectionFailed": "錢包連接失敗"
+  },
+  "home": {
+    "welcome": "歡迎來到香港零售NFT平台",
+    "featuredCoupons": "精選優惠券",
+    "nearbyMerchants": "附近商家",
+    "activeLotteries": "進行中的抽獎"
+  },
+  "explore": {
+    "searchPlaceholder": "搜尋商家或優惠券...",
+    "categories": "分類",
+    "allCategories": "所有分類",
+    "restaurants": "餐廳",
+    "shopping": "購物",
+    "entertainment": "娛樂",
+    "services": "服務"
+  },
+  "nft": {
+    "myNFTs": "我的NFT",
+    "availableCoupons": "可用優惠券",
+    "usedCoupons": "已使用優惠券",
+    "nftDetails": "NFT詳情",
+    "useCoupon": "使用優惠券",
+    "transferNFT": "轉讓NFT",
+    "purchaseNFT": "購買NFT",
+    "transactionHistory": "交易記錄",
+    "walletStatus": "錢包狀態",
+    "connected": "已連接",
+    "notConnected": "未連接",
+    "balance": "餘額",
+    "address": "地址"
+  },
+  "web3": {
+    "connectWallet": "連接錢包",
+    "disconnectWallet": "斷開錢包",
+    "metamask": "MetaMask",
+    "walletConnect": "WalletConnect",
+    "transactionPending": "交易待確認",
+    "transactionConfirmed": "交易已確認",
+    "transactionFailed": "交易失敗",
+    "insufficientBalance": "餘額不足",
+    "networkError": "網絡錯誤",
+    "userRejected": "用戶拒絕交易",
+    "purchaseSuccess": "購買成功",
+    "purchaseFailed": "購買失敗",
+    "transferSuccess": "轉移成功",
+    "transferFailed": "轉移失敗",
+    "useSuccess": "使用成功",
+    "useFailed": "使用失敗",
+    "walletStatus": "錢包狀態",
+    "walletType": "錢包類型",
+    "networkName": "網絡名稱",
+    "gasEstimate": "Gas估算",
+    "transactionHash": "交易哈希",
+    "blockExplorer": "區塊瀏覽器",
+    "confirmations": "確認數",
+    "estimatedTime": "預計時間",
+    "retryTransaction": "重試交易",
+    "viewDetails": "查看詳情",
+    "copyAddress": "複製地址",
+    "refreshBalance": "刷新餘額",
+    "switchNetwork": "切換網絡",
+    "addNetwork": "添加網絡",
+    "invalidAddress": "無效地址",
+    "addressRequired": "請輸入地址",
+    "transactionProcessing": "交易處理中",
+    "waitingConfirmation": "等待確認",
+    "polygonMumbai": "Polygon Mumbai 測試網",
+    "polygonMainnet": "Polygon 主網",
+    "ethereumMainnet": "以太坊主網"
+  },
+  "merchant": {
+    "details": "商家詳情",
+    "location": "位置",
+    "hours": "營業時間",
+    "contact": "聯絡方式",
+    "coupons": "優惠券",
+    "rating": "評分"
+  },
+  "lottery": {
+    "participate": "參與抽獎",
+    "entryFee": "參與費用",
+    "prizes": "獎品",
+    "timeRemaining": "剩餘時間",
+    "participationHistory": "參與記錄"
+  },
+  "profile": {
+    "settings": "設定",
+    "language": "語言",
+    "notifications": "通知",
+    "privacy": "私隱",
+    "about": "關於",
+    "logout": "登出"
+  },
+  "errors": {
+    "networkError": "網絡連接錯誤",
+    "serverError": "伺服器錯誤",
+    "invalidInput": "輸入無效",
+    "notFound": "找不到資源",
+    "unauthorized": "未授權訪問"
+  },
+  "map": {
+    "initializationError": "地圖初始化失敗",
+    "locationError": "位置錯誤",
+    "locationErrorMessage": "無法獲取您的位置，請檢查位置權限設定",
+    "yourLocation": "您的位置",
+    "downloadOfflineMap": "下載離線地圖",
+    "downloadOfflineMapMessage": "是否要下載此區域的離線地圖？這將使用您的數據流量。",
+    "offlineAvailable": "離線地圖可用 ({{size}})",
+    "offlineNotAvailable": "此區域沒有離線地圖",
+    "offlineMapDownloaded": "離線地圖下載完成",
+    "downloadError": "下載離線地圖失敗",
+    "clearCache": "清除緩存",
+    "clearCacheMessage": "確定要清除所有離線地圖緩存嗎？",
+    "cacheCleared": "緩存已清除",
+    "clearCacheError": "清除緩存失敗",
+    "downloadArea": "下載區域"
+  },
+  "location": {
+    "error": "位置錯誤",
+    "permissionRequired": "需要位置權限才能查找附近的店鋪"
+  },
+  "stores": {
+    "categories": {
+      "all": "全部",
+      "restaurant": "餐廳",
+      "retail": "零售",
+      "entertainment": "娛樂",
+      "service": "服務"
+    },
+    "searchPlaceholder": "搜索店鋪...",
+    "mapView": "地圖",
+    "listView": "列表",
+    "distance": "距離",
+    "viewDetails": "查看詳情",
+    "open": "營業中",
+    "closed": "已關閉",
+    "noStoresFound": "未找到店鋪",
+    "expandSearch": "擴大搜索範圍",
+    "searchError": "搜索附近店鋪失敗"
+  },
+  "notifications": {
+    "settings": {
+      "title": "通知設定",
+      "locationBased": {
+        "title": "基於位置的通知",
+        "enable": "啟用位置通知",
+        "description": "當您靠近參與商家時接收通知"
+      },
+      "radius": {
+        "title": "通知範圍",
+        "description": "您需要多接近才能收到通知"
+      },
+      "coupons": {
+        "title": "優惠券通知",
+        "reminders": "優惠券到期提醒",
+        "remindersDescription": "當您的優惠券即將到期時收到提醒"
+      },
+      "promotions": {
+        "title": "促銷通知",
+        "enable": "啟用促銷通知",
+        "description": "接收特別優惠和促銷活動的通知"
+      },
+      "success": {
+        "title": "設定已更新",
+        "message": "您的通知設定已成功更新"
+      },
+      "error": {
+        "title": "更新失敗",
+        "message": "更新通知設定失敗，請重試"
+      }
+    },
+    "clear": {
+      "button": "清除所有通知",
+      "confirm": {
+        "title": "清除通知",
+        "message": "確定要清除所有通知嗎？"
+      },
+      "success": {
+        "title": "通知已清除",
+        "message": "所有通知已被清除"
+      },
+      "error": {
+        "title": "清除失敗",
+        "message": "清除通知失敗，請重試"
+      }
+    },
+    "messages": {
+      "nearbyMerchant": "附近發現 {{merchantName}}",
+      "nearbyMerchantBody": "您距離 {{merchantName}} 只有 {{distance}}米，快來看看有什麼優惠！",
+      "couponExpiring": "優惠券即將到期",
+      "couponExpiringBody": "您的 {{merchantName}} 優惠券將在 {{days}} 天後到期，記得使用！",
+      "merchantPromotion": "{{merchantName}} 特別優惠",
+      "lotteryResult": "抽獎結果",
+      "lotteryWon": "恭喜！您贏得了 {{prize}}",
+      "lotteryLost": "下次好運！"
+    }
+  }
+}

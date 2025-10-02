@@ -1,0 +1,225 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "retry": "Retry"
+  },
+  "navigation": {
+    "home": "Home",
+    "explore": "Explore",
+    "nft": "NFT",
+    "profile": "Profile"
+  },
+  "auth": {
+    "connectWallet": "Connect Wallet",
+    "walletConnected": "Wallet Connected",
+    "walletDisconnected": "Wallet Disconnected",
+    "connectingWallet": "Connecting Wallet...",
+    "walletConnectionFailed": "Wallet Connection Failed"
+  },
+  "home": {
+    "welcome": "Welcome to Hong Kong Retail NFT Platform",
+    "featuredCoupons": "Featured Coupons",
+    "nearbyMerchants": "Nearby Merchants",
+    "activeLotteries": "Active Lotteries"
+  },
+  "explore": {
+    "searchPlaceholder": "Search merchants or coupons...",
+    "categories": "Categories",
+    "allCategories": "All Categories",
+    "restaurants": "Restaurants",
+    "shopping": "Shopping",
+    "entertainment": "Entertainment",
+    "services": "Services"
+  },
+  "nft": {
+    "myNFTs": "My NFTs",
+    "availableCoupons": "Available Coupons",
+    "usedCoupons": "Used Coupons",
+    "nftDetails": "NFT Details",
+    "useCoupon": "Use Coupon",
+    "transferNFT": "Transfer NFT",
+    "purchaseNFT": "Purchase NFT",
+    "transactionHistory": "Transaction History",
+    "walletStatus": "Wallet Status",
+    "connected": "Connected",
+    "notConnected": "Not Connected",
+    "balance": "Balance",
+    "address": "Address"
+  },
+  "web3": {
+    "connectWallet": "Connect Wallet",
+    "disconnectWallet": "Disconnect Wallet",
+    "metamask": "MetaMask",
+    "walletConnect": "WalletConnect",
+    "transactionPending": "Transaction Pending",
+    "transactionConfirmed": "Transaction Confirmed",
+    "transactionFailed": "Transaction Failed",
+    "insufficientBalance": "Insufficient Balance",
+    "networkError": "Network Error",
+    "userRejected": "User Rejected Transaction",
+    "purchaseSuccess": "Purchase Successful",
+    "purchaseFailed": "Purchase Failed",
+    "transferSuccess": "Transfer Successful",
+    "transferFailed": "Transfer Failed",
+    "useSuccess": "Use Successful",
+    "useFailed": "Use Failed",
+    "walletStatus": "Wallet Status",
+    "walletType": "Wallet Type",
+    "networkName": "Network Name",
+    "gasEstimate": "Gas Estimate",
+    "transactionHash": "Transaction Hash",
+    "blockExplorer": "Block Explorer",
+    "confirmations": "Confirmations",
+    "estimatedTime": "Estimated Time",
+    "retryTransaction": "Retry Transaction",
+    "viewDetails": "View Details",
+    "copyAddress": "Copy Address",
+    "refreshBalance": "Refresh Balance",
+    "switchNetwork": "Switch Network",
+    "addNetwork": "Add Network",
+    "invalidAddress": "Invalid Address",
+    "addressRequired": "Address Required",
+    "transactionProcessing": "Transaction Processing",
+    "waitingConfirmation": "Waiting for Confirmation",
+    "polygonMumbai": "Polygon Mumbai Testnet",
+    "polygonMainnet": "Polygon Mainnet",
+    "ethereumMainnet": "Ethereum Mainnet"
+  },
+  "merchant": {
+    "details": "Merchant Details",
+    "location": "Location",
+    "hours": "Business Hours",
+    "contact": "Contact",
+    "coupons": "Coupons",
+    "rating": "Rating"
+  },
+  "lottery": {
+    "participate": "Participate",
+    "entryFee": "Entry Fee",
+    "prizes": "Prizes",
+    "timeRemaining": "Time Remaining",
+    "participationHistory": "Participation History"
+  },
+  "profile": {
+    "settings": "Settings",
+    "language": "Language",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "about": "About",
+    "logout": "Logout"
+  },
+  "errors": {
+    "networkError": "Network Connection Error",
+    "serverError": "Server Error",
+    "invalidInput": "Invalid Input",
+    "notFound": "Resource Not Found",
+    "unauthorized": "Unauthorized Access"
+  },
+  "map": {
+    "initializationError": "Map initialization failed",
+    "locationError": "Location Error",
+    "locationErrorMessage": "Unable to get your location. Please check location permissions.",
+    "yourLocation": "Your Location",
+    "downloadOfflineMap": "Download Offline Map",
+    "downloadOfflineMapMessage": "Do you want to download offline map for this area? This will use your data.",
+    "offlineAvailable": "Offline map available ({{size}})",
+    "offlineNotAvailable": "No offline map for this area",
+    "offlineMapDownloaded": "Offline map downloaded",
+    "downloadError": "Failed to download offline map",
+    "clearCache": "Clear Cache",
+    "clearCacheMessage": "Are you sure you want to clear all offline map cache?",
+    "cacheCleared": "Cache cleared",
+    "clearCacheError": "Failed to clear cache",
+    "downloadArea": "Download Area"
+  },
+  "location": {
+    "error": "Location Error",
+    "permissionRequired": "Location permission is required to find nearby stores"
+  },
+  "stores": {
+    "categories": {
+      "all": "All",
+      "restaurant": "Restaurant",
+      "retail": "Retail",
+      "entertainment": "Entertainment",
+      "service": "Service"
+    },
+    "searchPlaceholder": "Search stores...",
+    "mapView": "Map",
+    "listView": "List",
+    "distance": "Distance",
+    "viewDetails": "View Details",
+    "open": "Open",
+    "closed": "Closed",
+    "noStoresFound": "No stores found",
+    "expandSearch": "Expand Search",
+    "searchError": "Failed to search nearby stores"
+  },
+  "notifications": {
+    "settings": {
+      "title": "Notification Settings",
+      "locationBased": {
+        "title": "Location-Based Notifications",
+        "enable": "Enable Location Notifications",
+        "description": "Get notified when you're near participating merchants"
+      },
+      "radius": {
+        "title": "Notification Radius",
+        "description": "How close you need to be to receive notifications"
+      },
+      "coupons": {
+        "title": "Coupon Notifications",
+        "reminders": "Coupon Expiry Reminders",
+        "remindersDescription": "Get reminded when your coupons are about to expire"
+      },
+      "promotions": {
+        "title": "Promotional Notifications",
+        "enable": "Enable Promotion Notifications",
+        "description": "Receive notifications about special offers and promotions"
+      },
+      "success": {
+        "title": "Settings Updated",
+        "message": "Your notification settings have been updated successfully"
+      },
+      "error": {
+        "title": "Update Failed",
+        "message": "Failed to update notification settings. Please try again."
+      }
+    },
+    "clear": {
+      "button": "Clear All Notifications",
+      "confirm": {
+        "title": "Clear Notifications",
+        "message": "Are you sure you want to clear all notifications?"
+      },
+      "success": {
+        "title": "Notifications Cleared",
+        "message": "All notifications have been cleared"
+      },
+      "error": {
+        "title": "Clear Failed",
+        "message": "Failed to clear notifications. Please try again."
+      }
+    },
+    "messages": {
+      "nearbyMerchant": "Nearby: {{merchantName}}",
+      "nearbyMerchantBody": "You're only {{distance}}m away from {{merchantName}}, check out their offers!",
+      "couponExpiring": "Coupon Expiring Soon",
+      "couponExpiringBody": "Your {{merchantName}} coupon expires in {{days}} days, don't forget to use it!",
+      "merchantPromotion": "{{merchantName}} Special Offer",
+      "lotteryResult": "Lottery Result",
+      "lotteryWon": "Congratulations! You won {{prize}}",
+      "lotteryLost": "Better luck next time!"
+    }
+  }
+}

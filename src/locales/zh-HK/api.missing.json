@@ -1,0 +1,6 @@
+{
+  "responses": {
+    "badrequest": "responses.badrequest",
+    "notfound": "responses.notfound"
+  }
+}

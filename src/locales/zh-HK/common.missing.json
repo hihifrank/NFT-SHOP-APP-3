@@ -1,0 +1,44 @@
+{
+  "123": {
+    "numeric": {
+      "key": "123.numeric.key"
+    }
+  },
+  "   ": "   ",
+  "key": {
+    "123": {
+      "numeric": "key.123.numeric"
+    },
+    "with": {
+      "": {
+        "double": {
+          "dots": "key.with..double.dots"
+        }
+      },
+      "trailing": {
+        "": "key.with.trailing."
+      }
+    }
+  },
+  "": {
+    "key": {
+      "with": {
+        "leading": {
+          "dot": ".key.with.leading.dot"
+        }
+      }
+    }
+  },
+  "key\nwith\nnewlines": "key\nwith\nnewlines",
+  "key\twith\ttabs": "key\twith\ttabs",
+  "key with spaces": "key with spaces",
+  "key-with-dashes": "key-with-dashes",
+  "key_with_underscores": "key_with_underscores",
+  "UPPERCASE": {
+    "KEY": "UPPERCASE.KEY"
+  },
+  "mixedCase": {
+    "Key": "mixedCase.Key"
+  },
+  "special!@#$%^&*()characters": "special!@#$%^&*()characters"
+}
