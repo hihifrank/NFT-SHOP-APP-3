@@ -43,5 +43,9 @@
     "noData": "暂无数据",
     "confirmDelete": "确定要删除吗？",
     "unsavedChanges": "您有未保存的更改"
+  },
+  "test": {},
+  "bulk": {
+    "test": {}
   }
 }

@@ -1,0 +1,56 @@
+groups:
+  - name: hk-retail-nft-platform
+    rules:
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate detected"
+          description: "Error rate is {{ $value | humanizePercentage }} for the last 5 minutes"
+
+      - alert: HighResponseTime
+        expr: histogram_quantile(0.95, rate(http_request_duration_ms_bucket[5m])) > 2000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High response time detected"
+          description: "95th percentile response time is {{ $value }}ms"
+
+      - alert: HighMemoryUsage
+        expr: (nodejs_memory_heap_used_bytes / nodejs_memory_heap_total_bytes) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage"
+          description: "Memory usage is {{ $value | humanizePercentage }}"
+
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service is down"
+          description: "{{ $labels.job }} service is down"
+
+      - alert: DatabaseConnectionFailure
+        expr: increase(errors_total{error_type=~".*Database.*"}[5m]) > 5
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Database connection failures"
+          description: "Multiple database connection failures detected"
+
+      - alert: BlockchainTransactionFailures
+        expr: rate(business_blockchain_transaction{status="failed"}[10m]) / rate(business_blockchain_transaction[10m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High blockchain transaction failure rate"
+          description: "Blockchain transaction failure rate is {{ $value | humanizePercentage }}"

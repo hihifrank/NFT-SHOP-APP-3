@@ -7,6 +7,9 @@ import lotteryRoutes from './lotteries';
 import storeRoutes from './stores';
 import languageRoutes from './languages';
 import contentRoutes from './content';
+import socketRoutes from './socket';
+import privacyRoutes from './privacy';
+import monitoringRoutes from './monitoring';
 
 const router = Router();
 
@@ -19,6 +22,9 @@ router.use('/lotteries', lotteryRoutes);
 router.use('/stores', storeRoutes);
 router.use('/languages', languageRoutes);
 router.use('/content', contentRoutes);
+router.use('/socket', socketRoutes);
+router.use('/privacy', privacyRoutes);
+router.use('/monitoring', monitoringRoutes);
 
 // API info endpoint
 router.get('/', (req, res) => {
@@ -37,6 +43,9 @@ router.get('/', (req, res) => {
         stores: '/api/v1/stores',
         languages: '/api/v1/languages',
         content: '/api/v1/content',
+        socket: '/api/v1/socket',
+        privacy: '/api/v1/privacy',
+        monitoring: '/api/v1/monitoring',
         docs: '/api/docs',
       },
     },

@@ -1,200 +1,330 @@
 # HK Retail NFT Platform
 
-A blockchain-based NFT coupon platform for Hong Kong retail businesses, combining traditional coupons with NFT digital assets to create a unique shopping experience for tourists and locals.
+A comprehensive blockchain-based NFT coupon platform for Hong Kong retail businesses, enabling merchants to create, distribute, and manage NFT coupons while providing customers with an innovative shopping experience.
 
-## Features
+## 🌟 Features
 
-- 🎫 **NFT Coupons**: Digital coupons as collectible NFTs with real utility
-- 🎰 **Lottery System**: Fair and transparent lottery system using blockchain
-- 🏪 **Store Discovery**: Find participating and non-participating retail stores
-- 🌐 **Multi-language**: Support for Traditional Chinese, Simplified Chinese, and English
-- 📱 **Mobile-first**: Optimized for mobile devices with offline capabilities
-- 🔒 **Secure**: Blockchain-based security with wallet integration
+### Core Functionality
+- **NFT Coupon System**: Create, mint, and manage NFT-based discount coupons
+- **Wallet Integration**: Support for MetaMask, WalletConnect, and other Web3 wallets
+- **Geolocation Services**: Find nearby participating stores and merchants
+- **Lottery System**: Engage customers with NFT lottery campaigns
+- **Multi-language Support**: English, Traditional Chinese, and Simplified Chinese
+- **Real-time Communication**: Live notifications and updates via Socket.IO
 
-## Tech Stack
+### Technical Features
+- **Blockchain Integration**: Built on Polygon network for low-cost transactions
+- **IPFS Storage**: Decentralized metadata and image storage
+- **Security First**: Comprehensive security measures and monitoring
+- **Mobile App**: React Native app for iOS and Android
+- **Scalable Architecture**: Microservices-ready with Kubernetes deployment
+- **Monitoring & Logging**: Complete observability stack with Prometheus and Grafana
 
-- **Backend**: Node.js, Express.js, TypeScript
-- **Database**: PostgreSQL with Redis caching
-- **Blockchain**: Polygon network, Web3.js, Solidity
-- **Storage**: IPFS for NFT metadata
-- **Containerization**: Docker & Docker Compose
+## 🏗️ Architecture
 
-## Quick Start
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Mobile App    │    │   Web Frontend  │    │   Admin Panel   │
+│  (React Native) │    │     (React)     │    │     (React)     │
+└─────────┬───────┘    └─────────┬───────┘    └─────────┬───────┘
+          │                      │                      │
+          └──────────────────────┼──────────────────────┘
+                                 │
+                    ┌─────────────┴─────────────┐
+                    │      API Gateway          │
+                    │    (Express.js + TS)      │
+                    └─────────────┬─────────────┘
+                                 │
+          ┌──────────────────────┼──────────────────────┐
+          │                      │                      │
+┌─────────┴───────┐    ┌─────────┴───────┐    ┌─────────┴───────┐
+│   PostgreSQL    │    │   Redis Cache   │    │   Blockchain    │
+│   (Database)    │    │   (Sessions)    │    │   (Polygon)     │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
 - Node.js 18+
-- Docker & Docker Compose
 - PostgreSQL 15+
 - Redis 7+
+- Docker & Docker Compose
+- Git
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/hk-retail-nft-platform.git
+   cd hk-retail-nft-platform
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   cd mobile && npm install && cd ..
+   ```
+
+3. **Environment setup**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
+
+4. **Database setup**
+   ```bash
+   npm run db:migrate
+   npm run db:seed
+   ```
+
+5. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+### Mobile App Setup
+
 ```bash
-git clone <repository-url>
-cd hk-retail-nft-platform
+cd mobile
+
+# iOS
+npx pod-install ios
+npm run ios
+
+# Android
+npm run android
 ```
 
-2. Install dependencies:
+## 📱 Mobile App
+
+The React Native mobile app provides a seamless user experience with:
+
+- Wallet connection and management
+- Store discovery with map integration
+- NFT coupon browsing and purchasing
+- Push notifications
+- Offline functionality
+- Multi-language support
+
+### Key Features
+- **Store Locator**: Find nearby participating stores
+- **NFT Collection**: View and manage owned NFT coupons
+- **Coupon Usage**: Redeem coupons at merchant locations
+- **Lottery Participation**: Join NFT lottery campaigns
+- **Profile Management**: User preferences and settings
+
+## 🔧 Development
+
+### Available Scripts
+
 ```bash
-npm install
+# Development
+npm run dev              # Start development server
+npm run build           # Build for production
+npm run start           # Start production server
+
+# Testing
+npm run test            # Run all tests
+npm run test:unit       # Unit tests
+npm run test:integration # Integration tests
+npm run test:e2e        # End-to-end tests
+npm run test:coverage   # Test coverage
+
+# Blockchain
+npm run compile         # Compile smart contracts
+npm run test:contracts  # Test smart contracts
+npm run deploy:local    # Deploy to local network
+npm run deploy:mumbai   # Deploy to Mumbai testnet
+npm run deploy:polygon  # Deploy to Polygon mainnet
+
+# Database
+npm run db:migrate      # Run migrations
+npm run db:seed         # Seed database
+npm run db:reset        # Reset database
+
+# Deployment
+npm run docker:build    # Build Docker image
+npm run deploy:staging  # Deploy to staging
+npm run deploy:production # Deploy to production
 ```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your configuration
-```
-
-4. Start with Docker Compose:
-```bash
-docker-compose up -d
-```
-
-5. Or run locally:
-```bash
-npm run dev
-```
-
-### Development
-
-```bash
-# Start development server
-npm run dev
-
-# Run tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-
-# Lint code
-npm run lint
-
-# Fix linting issues
-npm run lint:fix
-```
-
-## API Endpoints
-
-### Health Check
-- `GET /health` - Application health status
-
-### Authentication
-- `POST /api/v1/auth/register` - User registration
-- `POST /api/v1/auth/login` - User login
-- `POST /api/v1/auth/verify` - Verify JWT token
-
-### Users
-- `GET /api/v1/users/profile` - Get user profile
-- `PUT /api/v1/users/profile` - Update user profile
-- `GET /api/v1/users/nfts` - Get user's NFTs
-- `GET /api/v1/users/transactions` - Get user's transaction history
-
-### Merchants
-- `POST /api/v1/merchants/register` - Register merchant
-- `GET /api/v1/merchants/profile` - Get merchant profile
-- `PUT /api/v1/merchants/profile` - Update merchant profile
-- `POST /api/v1/merchants/coupons` - Create coupon
-- `GET /api/v1/merchants/analytics` - Get merchant analytics
-
-### Coupons
-- `POST /api/v1/coupons/use` - Use a coupon
-- `POST /api/v1/coupons/transfer` - Transfer NFT coupon
-- `GET /api/v1/coupons/:id` - Get coupon details
-- `POST /api/v1/coupons/validate` - Validate coupon
-
-### Lotteries
-- `GET /api/v1/lotteries/active` - Get active lotteries
-- `POST /api/v1/lotteries/participate` - Participate in lottery
-- `GET /api/v1/lotteries/history` - Get lottery history
-- `GET /api/v1/lotteries/:id/results` - Get lottery results
-
-### Stores
-- `GET /api/v1/stores/search` - Search stores
-- `GET /api/v1/stores/nearby` - Get nearby stores
-- `GET /api/v1/stores/:id` - Get store details
-- `GET /api/v1/stores/recommendations` - Get recommended stores
-
-## Project Structure
+### Project Structure
 
 ```
-src/
-├── config/          # Configuration files
-├── controllers/     # API route handlers
-├── models/          # Database models
-├── repositories/    # Data access layer
-├── services/        # Business logic layer
-├── types/           # TypeScript type definitions
-├── utils/           # Utility functions
-└── index.ts         # Application entry point
+├── src/                    # Backend source code
+│   ├── controllers/        # API controllers
+│   ├── services/          # Business logic
+│   ├── repositories/      # Data access layer
+│   ├── middleware/        # Express middleware
+│   ├── routes/           # API routes
+│   ├── utils/            # Utility functions
+│   └── __tests__/        # Test files
+├── mobile/               # React Native mobile app
+│   ├── src/
+│   │   ├── components/   # Reusable components
+│   │   ├── screens/      # App screens
+│   │   ├── services/     # API and business logic
+│   │   ├── store/        # Redux store
+│   │   └── utils/        # Utility functions
+├── contracts/            # Smart contracts
+├── k8s/                 # Kubernetes manifests
+├── monitoring/          # Monitoring configuration
+├── scripts/             # Deployment scripts
+└── docs/               # Documentation
 ```
 
-## Environment Variables
+## 🔐 Security
 
-See `.env.example` for all available configuration options.
+The platform implements comprehensive security measures:
 
-Key variables:
-- `NODE_ENV`: Environment (development/staging/production)
-- `PORT`: Server port (default: 3000)
-- `JWT_SECRET`: Secret for JWT token signing
-- `DB_*`: Database connection settings
-- `REDIS_*`: Redis connection settings
-- `BLOCKCHAIN_*`: Blockchain network configuration
+- **Authentication**: JWT tokens with wallet signature verification
+- **Authorization**: Role-based access control (RBAC)
+- **Input Validation**: Comprehensive input sanitization
+- **Rate Limiting**: API rate limiting and DDoS protection
+- **HTTPS Enforcement**: SSL/TLS encryption
+- **Security Headers**: Helmet.js security headers
+- **Data Privacy**: GDPR compliance with data export/deletion
+- **Monitoring**: Security event logging and alerting
 
-## Docker Support
+## 📊 Monitoring & Observability
 
-The application includes full Docker support with multi-stage builds:
+### Monitoring Stack
+- **Prometheus**: Metrics collection and alerting
+- **Grafana**: Visualization and dashboards
+- **Loki**: Log aggregation
+- **AlertManager**: Alert routing and notification
+
+### Key Metrics
+- API response times and error rates
+- Database performance
+- Blockchain transaction status
+- User engagement metrics
+- System resource usage
+
+### Health Checks
+- `/health` - Basic health check
+- `/health/ready` - Readiness probe
+- `/api/v1/monitoring/metrics` - Application metrics
+
+## 🚢 Deployment
+
+### Docker Deployment
 
 ```bash
 # Build and run with Docker Compose
 docker-compose up -d
 
-# View logs
-docker-compose logs -f app
+# Build production image
+npm run docker:build
 
-# Stop services
-docker-compose down
+# Run production container
+npm run docker:run
 ```
 
-Services included:
-- **app**: Main Node.js application
-- **postgres**: PostgreSQL database
-- **redis**: Redis cache
-- **pgadmin**: Database admin interface (dev profile)
-- **redis-commander**: Redis admin interface (dev profile)
+### Kubernetes Deployment
 
-## Testing
+```bash
+# Apply all Kubernetes resources
+kubectl apply -f k8s/
 
-The project uses Jest for testing with TypeScript support:
+# Deploy to staging
+npm run deploy:staging
+
+# Deploy to production
+npm run deploy:production
+
+# Rollback deployment
+npm run rollback
+```
+
+### CI/CD Pipeline
+
+The project includes a complete CI/CD pipeline with GitHub Actions:
+
+- Automated testing (unit, integration, E2E)
+- Security scanning
+- Docker image building
+- Kubernetes deployment
+- Monitoring and alerting
+
+## 🧪 Testing
+
+### Test Coverage
+- **Unit Tests**: Individual component testing
+- **Integration Tests**: API and service integration
+- **E2E Tests**: Complete user journey testing
+- **Performance Tests**: Load and stress testing
+- **Security Tests**: Vulnerability and penetration testing
+
+### Running Tests
 
 ```bash
 # Run all tests
 npm test
 
-# Run tests in watch mode
-npm run test:watch
+# Run specific test suites
+npm run test:unit
+npm run test:integration
+npm run test:e2e
+npm run test:security
 
-# Generate coverage report
-npm test -- --coverage
+# Run with coverage
+npm run test:coverage
 ```
 
-## Contributing
+## 🌍 Internationalization
+
+The platform supports multiple languages:
+
+- **English** (en)
+- **Traditional Chinese** (zh-HK)
+- **Simplified Chinese** (zh-CN)
+
+Language switching is available in both web and mobile interfaces.
+
+## 📚 API Documentation
+
+API documentation is available at `/api/docs` when running the server. The API follows RESTful conventions with comprehensive OpenAPI/Swagger documentation.
+
+### Key Endpoints
+- `POST /api/v1/auth/register` - User registration
+- `GET /api/v1/stores/nearby` - Find nearby stores
+- `POST /api/v1/coupons/create` - Create NFT coupon
+- `POST /api/v1/coupons/{id}/purchase` - Purchase NFT
+- `POST /api/v1/lotteries/create` - Create lottery
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass
-6. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## License
+### Development Guidelines
+- Follow TypeScript best practices
+- Write comprehensive tests
+- Update documentation
+- Follow security guidelines
+- Use conventional commits
 
-MIT License - see LICENSE file for details.
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+For support and questions:
+
+- Create an issue on GitHub
+- Check the [documentation](docs/)
+- Review the [API documentation](/api/docs)
+
+## 🙏 Acknowledgments
+
+- OpenZeppelin for smart contract libraries
+- Polygon network for blockchain infrastructure
+- IPFS for decentralized storage
+- React Native community for mobile development tools

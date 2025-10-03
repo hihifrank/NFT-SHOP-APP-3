@@ -43,5 +43,9 @@
     "noData": "暫無資料",
     "confirmDelete": "確定要刪除嗎？",
     "unsavedChanges": "您有未儲存的變更"
+  },
+  "test": {},
+  "bulk": {
+    "test": {}
   }
 }

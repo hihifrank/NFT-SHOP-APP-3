@@ -1,0 +1,178 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "HK Retail NFT Platform Dashboard",
+    "tags": ["hk-retail-nft", "monitoring"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "HTTP Request Rate",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(http_requests_total[5m])",
+            "legendFormat": "{{method}} {{status}}"
+          }
+        ],
+        "yAxes": [
+          {
+            "label": "Requests/sec"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "id": 2,
+        "title": "Response Time",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(http_request_duration_ms_bucket[5m]))",
+            "legendFormat": "95th percentile"
+          },
+          {
+            "expr": "histogram_quantile(0.50, rate(http_request_duration_ms_bucket[5m]))",
+            "legendFormat": "50th percentile"
+          }
+        ],
+        "yAxes": [
+          {
+            "label": "Milliseconds"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        }
+      },
+      {
+        "id": 3,
+        "title": "Error Rate",
+        "type": "singlestat",
+        "targets": [
+          {
+            "expr": "rate(http_requests_total{status=~\"5..\"}[5m]) / rate(http_requests_total[5m]) * 100",
+            "legendFormat": "Error Rate %"
+          }
+        ],
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 0,
+          "y": 8
+        },
+        "thresholds": "1,5",
+        "colorBackground": true
+      },
+      {
+        "id": 4,
+        "title": "Memory Usage",
+        "type": "singlestat",
+        "targets": [
+          {
+            "expr": "(nodejs_memory_heap_used_bytes / nodejs_memory_heap_total_bytes) * 100",
+            "legendFormat": "Memory %"
+          }
+        ],
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 6,
+          "y": 8
+        },
+        "thresholds": "70,85",
+        "colorBackground": true
+      },
+      {
+        "id": 5,
+        "title": "Active Connections",
+        "type": "singlestat",
+        "targets": [
+          {
+            "expr": "nodejs_active_handles_total",
+            "legendFormat": "Active Handles"
+          }
+        ],
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 12,
+          "y": 8
+        }
+      },
+      {
+        "id": 6,
+        "title": "Uptime",
+        "type": "singlestat",
+        "targets": [
+          {
+            "expr": "nodejs_process_uptime_seconds",
+            "legendFormat": "Uptime"
+          }
+        ],
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 18,
+          "y": 8
+        },
+        "format": "s"
+      },
+      {
+        "id": 7,
+        "title": "Business Metrics - NFT Operations",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(business_nft_mint[5m])",
+            "legendFormat": "NFT Mints/sec"
+          },
+          {
+            "expr": "rate(business_coupon_usage[5m])",
+            "legendFormat": "Coupon Usage/sec"
+          },
+          {
+            "expr": "rate(business_lottery_participation[5m])",
+            "legendFormat": "Lottery Participation/sec"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 12
+        }
+      },
+      {
+        "id": 8,
+        "title": "Blockchain Transaction Status",
+        "type": "piechart",
+        "targets": [
+          {
+            "expr": "sum by (status) (business_blockchain_transaction)",
+            "legendFormat": "{{status}}"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 12
+        }
+      }
+    ],
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "refresh": "30s"
+  }
+}

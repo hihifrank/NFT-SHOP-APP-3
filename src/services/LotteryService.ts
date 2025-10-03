@@ -152,6 +152,19 @@ export class LotteryService {
         throw new BusinessError('Lottery has not ended yet', BusinessErrorType.LOTTERY_NOT_ACTIVE);
       }
 
+      // Broadcast draw started event
+      if (global.socketService) {
+        global.socketService.broadcastLotteryEvent({
+          lotteryId,
+          type: 'draw_started',
+          data: {
+            lotteryName: lottery.name,
+            totalParticipants: lottery.currentParticipants || 0
+          },
+          timestamp: new Date()
+        });
+      }
+
       // Get all participants
       const participants = await this.lotteryRepository.getLotteryParticipants(lotteryId);
       
@@ -167,6 +180,53 @@ export class LotteryService {
         userId: w.userId,
         prize: w.prize
       })));
+
+      // Broadcast draw completed event
+      if (global.socketService) {
+        global.socketService.broadcastLotteryEvent({
+          lotteryId,
+          type: 'draw_completed',
+          data: {
+            lotteryName: lottery.name,
+            totalWinners: winners.length,
+            prizesSummary: lottery.prizePool
+          },
+          timestamp: new Date()
+        });
+      }
+
+      // Broadcast winner announcement
+      if (global.socketService) {
+        global.socketService.broadcastLotteryEvent({
+          lotteryId,
+          type: 'winner_announced',
+          data: {
+            lotteryName: lottery.name,
+            winners: winners.map(w => ({
+              userId: w.userId,
+              prize: w.prize,
+              winningNumber: w.winningNumber
+            }))
+          },
+          timestamp: new Date()
+        });
+
+        // Send individual notifications to winners
+        winners.forEach(winner => {
+          global.socketService.sendNotification({
+            type: 'lottery',
+            title: '🎉 恭喜中獎！',
+            message: `您在抽獎「${lottery.name}」中獲得了 ${winner.prize.type} 獎品！`,
+            data: {
+              lotteryId,
+              lotteryName: lottery.name,
+              prize: winner.prize
+            },
+            targetUsers: [winner.userId],
+            timestamp: new Date()
+          });
+        });
+      }
 
       // Create winner transactions
       // Note: In a real implementation, this would create proper transaction records

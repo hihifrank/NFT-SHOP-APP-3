@@ -4,3 +4,6 @@ export { default as requestLogger } from './requestLogger';
 export { default as validation } from './validation';
 export { default as security } from './security';
 export { default as auth } from './auth';
+export { default as ddosProtection } from './ddosProtection';
+export { default as inputSanitization } from './inputSanitization';
+export { default as httpsEnforcement } from './httpsEnforcement';

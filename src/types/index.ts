@@ -348,3 +348,45 @@ export interface AppConfig {
     baseUrl: string;
   };
 }
+
+// Socket.io related types
+export interface SocketUser {
+  id: string;
+  walletAddress: string;
+  rooms: Set<string>;
+}
+
+export interface LotteryBroadcast {
+  lotteryId: string;
+  type: 'draw_started' | 'draw_completed' | 'winner_announced';
+  data: any;
+  timestamp: Date;
+}
+
+export interface PromotionBroadcast {
+  merchantId: string;
+  type: 'new_promotion' | 'limited_offer' | 'flash_sale';
+  title: string;
+  description: string;
+  location?: {
+    latitude: number;
+    longitude: number;
+    radius: number; // in meters
+  };
+  data: any;
+  timestamp: Date;
+}
+
+export interface NotificationBroadcast {
+  type: 'system' | 'merchant' | 'lottery' | 'nft';
+  title: string;
+  message: string;
+  data?: any;
+  targetUsers?: string[];
+  targetLocation?: {
+    latitude: number;
+    longitude: number;
+    radius: number;
+  };
+  timestamp: Date;
+}
